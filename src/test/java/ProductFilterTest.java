@@ -10,11 +10,12 @@ public class ProductFilterTest extends BaseTest {
 
         homePage.acceptPrivacyModal();
         homePage.closeAdMark();
-        MenPage menPage = homePage.clickOnMenPageDropdown();
+        MenPage menPage = homePage.hoverOnMenPageDropdown();
         menPage.clickOnViewAll();
         menPage.clickOnFilterLtoH();
 
         Assert.assertEquals(menPage.checkThePrices(), AssertionMessages.Lowest_TO_Highest);
 
     }
+
 }

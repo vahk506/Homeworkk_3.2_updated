@@ -20,8 +20,8 @@ public class BaseTest {
         screenshotListener.setDriver(driver);
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }

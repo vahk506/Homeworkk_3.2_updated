@@ -10,7 +10,7 @@ public class SizeDetailsTest extends BaseTest{
 
         homePage.acceptPrivacyModal();
         homePage.closeAdMark();
-        MenPage menPage = homePage.clickOnMenPageDropdown();
+        MenPage menPage = homePage.hoverOnMenPageDropdown();
         menPage.clickOnViewAll();
         ProductPage productPage = menPage.clickOnProduct();
         productPage.clickOnSizeDetails();

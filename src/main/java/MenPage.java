@@ -29,6 +29,7 @@ public class MenPage {
         return new ProductPage(driver);
     }
 
+
     public String successfulSearch() {
         WebElement searchText = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.SEARCH_RESULT));
         boolean isDisplayed = searchText.isDisplayed();

@@ -1,8 +1,12 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class HomePage {
     private final WebDriver driver;
@@ -25,8 +29,11 @@ public class HomePage {
         return this;
     }
 
-    public MenPage clickOnMenPageDropdown() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LINK_TO_MEN_PAGE)).click();
+    public MenPage hoverOnMenPageDropdown() throws InterruptedException {
+        var actions = new Actions(driver);
+        WebElement figure1 = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LINK_TO_MEN_PAGE));
+        actions.moveToElement(figure1).perform();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LINK_TO_MEN_PAGE));
         return new MenPage(driver);
     }
 
